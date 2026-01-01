@@ -42,9 +42,6 @@ EhTag统计工具是一个用于统计和分析E-Hentai/ExHentai收藏夹中标�
 - **USER_AGENT**：浏览器User-Agent字符串，通常无需修改。
 - **USER_COOKIE**：E-Hentai/ExHentai的登录Cookie。必须包含 `igneous`、`ipb_member_id`、`ipb_pass_hash` 等字段。
   - 获取方法：登录网站后，按F12打开开发者工具，刷新页面，在"应用程序" > "Cookie"中复制相关值。
-- **FAVORITES_URL**：收藏夹首页URL。
-  - E-Hentai：`https://e-hentai.org/favorites.php`
-  - ExHentai：`https://exhentai.org/favorites.php`
 
 #### 可选配置
 
@@ -102,11 +99,3 @@ python EhTag_Pub.py
 ## 许可证
 
 本项目仅供学习和个人使用，请遵守相关法律法规。
-
-## 贡献
-
-欢迎提交Issue和Pull Request来改进工具。
-
-## 更新日志
-
-- v1.0：初始版本，支持基本抓取和统计功能。
