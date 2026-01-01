@@ -6,8 +6,8 @@ EhTag统计工具是一个用于统计和分析E-Hentai/ExHentai收藏夹中标�
 
 ## 功能特性
 
-- **自动抓取数据**：从E-Hentai/ExHentai收藏夹自动抓取漫画信息，包括类型、页数和标签。
-- **智能权重计算**：根据漫画类型和页数计算权重，避免页数少的漫画权重过低。
+- **自动抓取数据**：从E-Hentai/ExHentai收藏夹自动抓取画廊信息，包括类型、页数和标签。
+- **智能权重计算**：根据画廊类型和页数计算权重，避免页数少的画廊权重过低。
 - **多文件夹支持**：支持选择特定收藏文件夹进行统计。
 - **标签分类统计**：按Namespace（如female、artist、group等）分别统计标签权重。
 - **可视化输出**：生成水平柱状图表，直观展示前N个标签。
@@ -35,7 +35,7 @@ EhTag统计工具是一个用于统计和分析E-Hentai/ExHentai收藏夹中标�
 
 ### 1. 配置脚本
 
-下载并打开 `EhTag_Pub.py` 文件，修改配置区中的变量：
+打开 `EhTag_Pub.py` 文件，修改配置区中的变量：
 
 #### 必需配置
 
@@ -46,7 +46,7 @@ EhTag统计工具是一个用于统计和分析E-Hentai/ExHentai收藏夹中标�
 #### 可选配置
 
 - **PAGE_BASIC_RATIO**：基础页面权重系数（默认30.0）。
-- **CATEGORY_WEIGHTS**：不同漫画类型的页数权重配置。
+- **CATEGORY_WEIGHTS**：不同画廊类型的页数权重配置。
 - **SELECTED_FAVORITE_FOLDERS**：需要统计的收藏文件夹ID列表（留空统计所有）。
 - **TARGET_NAMESPACES**：需要统计的标签分类列表。
 - **TOP_N_CONFIG**：每个Namespace展示的Top标签数量。
@@ -71,7 +71,7 @@ python EhTag_Pub.py
 
 ## 输出文件说明
 
-- **缓存文件**：`eh_favorites_cache.json` - 包含所有抓取的漫画详细信息。
+- **缓存文件**：`eh_favorites_cache.json` - 包含所有抓取的画廊详细信息。
 - **统计CSV**：`stats_{namespace}.csv` - 各标签的加权分数，按分数降序排列。
 - **图表文件**：`chart_{namespace}.png` - Top标签的水平柱状图。
 
@@ -86,7 +86,7 @@ python EhTag_Pub.py
 
 ## 权重计算逻辑
 
-- **漫画总权重** = 基础权重 + (页数 × 类型权重系数)
+- **画廊总权重** = 基础权重 + (页数 × 类型权重系数)
 - **标签权重分配**：总权重平均分配给该Namespace下的所有标签
 
 ## 故障排除
